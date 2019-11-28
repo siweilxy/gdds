@@ -1,0 +1,32 @@
+export class ApInfo {
+    ap_id_cd: string;
+    ap_st:string;
+    ap_priv_bmp:string;
+    ap_vfy_md:string;
+    ap_vfy_alg:string;
+    ap_vfy_key:string;
+    sys_id:string;
+    clt_tp:string;
+    tfr_md:string;
+    idle_snd_tm:string;
+    idle_chk_tm:string;
+    db_in:string;
+    db_name:string;
+    db_connect_time_out:string;
+    db_receive_time_out:string;
+    data_num:string;
+    reformat_in:string;
+    clt_module:string;
+    clt_version:string;
+    platform:string;
+    deploy:string;
+    lia_officer:string;
+    oper_team:string;
+    ap_desc:string;
+    oper_in:string;
+    event_id:string;
+    rec_id:string;
+    rec_upd_usr_id:string;
+    rec_upd_ts:string;
+    rec_crt_ts:string;
+  }

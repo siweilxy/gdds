@@ -1,0 +1,103 @@
+<div *ngIf="apinfo">
+
+  <h2>{{apinfo.ap_id_cd | uppercase}} Details</h2>
+  <div>
+    <label>ap_id_cd:接入机构码    <br>    
+      <input [(ngModel)]="apinfo.ap_id_cd" placeholder="接入机构码"/> 
+    </label>
+
+    <label>ap_st:机构状态，取默认值 1    <br>
+      <input [(ngModel)]="apinfo.ap_st" placeholder="机构状态，取默认值 1"/>
+    </label>
+    <label>ap_priv_bmp:接入端权限位图，取默认值全1    <br>
+      <input [(ngModel)]="apinfo.ap_priv_bmp" placeholder="接入端权限位图，取默认值全1"/>
+    </label>
+    <label>ap_vfy_md:身份认证方式，取默认值00    <br>
+      <input [(ngModel)]="apinfo.ap_vfy_md" placeholder="身份认证方式，取默认值00"/>
+    </label>
+    <label>ap_vfy_alg:身份认证算法，取默认值00    <br>
+      <input [(ngModel)]="apinfo.ap_vfy_alg" placeholder="身份认证算法，取默认值00"/>
+    </label>
+    <label>ap_vfy_key:身份认证密钥，取默认值78191EF63CF3D967    <br>
+      <input [(ngModel)]="apinfo.ap_vfy_key" placeholder="身份认证密钥，取默认值78191EF63CF3D967"/>
+    </label>
+    
+    <label>sys_id:系统代码，取值对客户端setenv中export sys_id 的值    <br>
+      <input [(ngModel)]="apinfo.sys_id" placeholder="系统代码，取值对客户端setenv中export sys_id 的值"/>
+    </label>
+    
+    <label>clt_tp:客户端类型，01:表示发布端，02:表示订阅端，03:表示既有发布端也有订阅端    <br>
+      <input [(ngModel)]="apinfo.clt_tp" placeholder="客户端类型，01:表示发布端，02:表示订阅端，03:表示既有发布端也有订阅端"/>
+    </label>
+    
+    <label>tfr_md:一致性要求，0:不要求一致性，1:表示严格一致性，2:既有分钟级又有秒级    <br>
+      <input [(ngModel)]="apinfo.tfr_md" placeholder="一致性要求，0:不要求一致性，1:表示严格一致性，2:既有分钟级又有秒级"/>
+    </label>
+    <label>idle_snd_tm:空闲包发送时间，默认值120，单位秒    <br>
+      <input [(ngModel)]="apinfo.idle_snd_tm" placeholder="空闲包发送时间，默认值120，单位秒"/>
+    </label>
+    <label>idle_chk_tm:空闲包检查时间，默认值180，单位秒    <br>
+      <input [(ngModel)]="apinfo.idle_chk_tm" placeholder="空闲包检查时间，默认值180，单位秒"/>
+    </label>
+    <label>db_in:是否操作数据库，0:不操作，1:操作数据库    <br>
+      <input [(ngModel)]="apinfo.db_in" placeholder="是否操作数据库，0:不操作，1:操作数据库"/>
+    </label>
+    <label>db_name:数据库名，取值操作的数据库名称，例如cuswtdb    <br>
+      <input [(ngModel)]="apinfo.db_name" placeholder="数据库名，取值操作的数据库名称，例如cuswtdb"/>
+    </label>
+    <label>db_connect_time_out:数据库连接超时时间，默认值为10，单位秒    <br>
+      <input [(ngModel)]="apinfo.db_connect_time_out" placeholder="数据库连接超时时间，默认值为10，单位秒"/>
+    </label>
+    <label>db_receive_time_out:数据库操作超时时间，默认值为8，单位秒    <br>
+      <input [(ngModel)]="apinfo.db_receive_time_out" placeholder="数据库操作超时时间，默认值为8，单位秒"/>
+    </label>
+    <label>data_num:涉及的数据类型数量，取发布或者订阅data_index总量    <br>
+      <input [(ngModel)]="apinfo.data_num" placeholder="涉及的数据类型数量，取发布或者订阅data_index总量"/>
+    </label>
+    <label>reformat_in:是否涉及形变，如果在服务端形变，取值为1，否则取0    <br>
+      <input [(ngModel)]="apinfo.reformat_in" placeholder="是否涉及形变，如果在服务端形变，取值为1，否则取0"/>
+    </label>
+    <label>clt_module:取值客户端模块名称，例如gddsclt_cuswt    <br>
+      <input [(ngModel)]="apinfo.clt_module" placeholder="取值客户端模块名称，例如gddsclt_cuswt"/>
+    </label>
+    <label>clt_version:客户端版本，取默认值1.0.0    <br>
+      <input [(ngModel)]="apinfo.clt_version" placeholder="客户端版本，取默认值1.0.0"/>
+    </label>
+    <label>platform:指客户端运行平台，取值：01:表示aix6+db2 02:aix7+db2 03:suse+mysql 04:其他    <br>
+      <input [(ngModel)]="apinfo.platform" placeholder="指客户端运行平台，取值：01:表示aix6+db2 02:aix7+db2 03:suse+mysql 04:其他"/>
+    </label>
+    <label>deploy:部署环境，01:小型机 02 云平台 03 其他    <br>
+      <input [(ngModel)]="apinfo.deploy" placeholder="部署环境，01:小型机 02 云平台 03 其他"/>
+    </label>
+    <label>lia_officer:联系人，指客户端的开发联系人，写姓名    <br>
+      <input [(ngModel)]="apinfo.lia_officer" placeholder="联系人，指客户端的开发联系人，写姓名"/>
+    </label>
+    <label>oper_team:负责该客户端运维的科室（信总）    <br>
+      <input [(ngModel)]="apinfo.oper_team" placeholder="负责该客户端运维的科室（信总）"/>
+    </label>
+    <label>ap_desc:接入端描述    <br>
+      <input [(ngModel)]="apinfo.ap_desc" placeholder="接入端描述"/>
+    </label>
+    <label>oper_in:操作标识，新增记录取I,更新记录取U,注意，如果取值错误，会导致共享内存被破坏，影响严重，服务端没有分发的数据会丢失    <br>
+      <input [(ngModel)]="apinfo.oper_in" placeholder="操作标识，新增记录取I,更新记录取U,注意，如果取值错误，会导致共享内存被破坏，影响严重，服务端没有分发的数据会丢失"/>
+    </label>
+    <label>event_id:取值版本变更号    <br>
+      <input [(ngModel)]="apinfo.event_id" placeholder="取值版本变更号"/>
+    </label>
+    <label>rec_id:记录编码，唯一    <br>
+      <input [(ngModel)]="apinfo.rec_id" placeholder="记录编码，唯一"/>
+    </label>
+    <label>rec_upd_usr_id:修改的用户标识，根据实际修改记录的人的名字取值    <br>
+      <input [(ngModel)]="apinfo.rec_upd_usr_id" placeholder="修改的用户标识，根据实际修改记录的人的名字取值"/>
+    </label>
+    <label>rec_upd_ts:取当前时间    <br>
+      <input [(ngModel)]="apinfo.rec_upd_ts" placeholder="取当前时间"/>
+    </label>
+    <label>rec_crt_ts:取当前时间    <br>
+      <input [(ngModel)]="apinfo.rec_crt_ts" placeholder="取当前时间"/>
+    </label>
+
+  </div>
+  <button (click)="goBack()">go back</button>
+  <button (click)="save()">save</button>
+</div>

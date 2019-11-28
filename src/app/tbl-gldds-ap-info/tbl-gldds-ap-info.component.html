@@ -1,0 +1,21 @@
+<h2>Apinfos</h2>
+
+<div>
+  <label>Apinfo ap_id_cd:
+    <input #ap_id_cd />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(ap_id_cd.value); ap_id_cd.value=''">
+    add
+  </button>
+</div>
+
+<ul class="apinfos">
+  <li *ngFor="let apinfo of apinfos">
+    <a routerLink="/detail/{{apinfo.ap_id_cd}}">
+      <span class="badge">{{apinfo.ap_id_cd}}</span> {{apinfo.ap_desc}}
+    </a>
+    <button class="delete" title="delete apinfo"
+      (click)="delete(apinfo)">x</button>
+  </li>
+</ul>

@@ -1,0 +1,13 @@
+<div id="search-component">
+  <h4><label for="search-box">Apinfo Search</label></h4>
+
+  <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+
+  <ul class="search-result">
+    <li *ngFor="let apinfo of apinfos$ | async" >
+      <a routerLink="/detail/{{apinfo.ap_id_cd}}">
+        {{apinfo.ap_id_cd}}
+      </a>
+    </li>
+  </ul>
+</div>
