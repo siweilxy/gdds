@@ -15,7 +15,7 @@ import { TblGlddsSubTsComponent } from './tbl-gldds-sub-ts/tbl-gldds-sub-ts.comp
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'detail/:id', component: ApinfoDetailComponent },
+  { path: 'detail/apinfo/:id', component: ApinfoDetailComponent },
   { path: 'apinfos', component: TblGlddsApInfoComponent },
   { path: 'pubcfgs',component:TblGlddsCltpubCfgComponent},
   { path: 'subcfgs',component:TblGlddsCltsubCfgComponent},

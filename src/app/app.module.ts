@@ -20,6 +20,13 @@ import { TblGlddsDataSubInfoComponent } from './tbl-gldds-data-sub-info/tbl-gldd
 import { TblGlddsLineCfgComponent } from './tbl-gldds-line-cfg/tbl-gldds-line-cfg.component';
 import { TblGlddsPubTsComponent } from './tbl-gldds-pub-ts/tbl-gldds-pub-ts.component';
 import { TblGlddsSubTsComponent } from './tbl-gldds-sub-ts/tbl-gldds-sub-ts.component';
+import { PubcfgDetailComponent } from './pubcfg-detail/pubcfg-detail.component';
+import { SubcfgDetailComponent } from './subcfg-detail/subcfg-detail.component';
+import { PubinfoDetailComponent } from './pubinfo-detail/pubinfo-detail.component';
+import { SubinfoDetailComponent } from './subinfo-detail/subinfo-detail.component';
+import { LinecfgDetailComponent } from './linecfg-detail/linecfg-detail.component';
+import { PubtsDetailComponent } from './pubts-detail/pubts-detail.component';
+import { SubtsDetailComponent } from './subts-detail/subts-detail.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +42,14 @@ import { TblGlddsSubTsComponent } from './tbl-gldds-sub-ts/tbl-gldds-sub-ts.comp
     TblGlddsDataSubInfoComponent,
     TblGlddsLineCfgComponent,
     TblGlddsPubTsComponent,
-    TblGlddsSubTsComponent
+    TblGlddsSubTsComponent,
+    PubcfgDetailComponent,
+    SubcfgDetailComponent,
+    PubinfoDetailComponent,
+    SubinfoDetailComponent,
+    LinecfgDetailComponent,
+    PubtsDetailComponent,
+    SubtsDetailComponent
   ],
   imports: [
     BrowserModule,

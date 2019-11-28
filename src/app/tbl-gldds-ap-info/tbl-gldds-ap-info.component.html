@@ -12,7 +12,7 @@
 
 <ul class="apinfos">
   <li *ngFor="let apinfo of apinfos">
-    <a routerLink="/detail/{{apinfo.ap_id_cd}}">
+    <a routerLink="/detail/apinfo/{{apinfo.ap_id_cd}}">
       <span class="badge">{{apinfo.ap_id_cd}}</span> {{apinfo.ap_desc}}
     </a>
     <button class="delete" title="delete apinfo"
