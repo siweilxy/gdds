@@ -1,0 +1,26 @@
+export class Pubcfg {
+    pub_id_cd:string;
+    ap_sid:string;
+    ap_tp:string;
+    task_limit:string;
+    task_push_gap:string;
+    sjso_path:string;
+    get_tm_md:string;
+    get_data_md:string;
+    min_adjust_tm:string;
+    task_time_slice:string;
+    sec_adjust_tm:string;
+    sec_dispach_gap:string;
+    zip_in:string;
+    enc_in:string;
+    max_rec_num:string;
+    stat_in:string;
+    sid_desc:string;
+    resv_fld:string;
+    oper_in:string;
+    event_id:string;
+    rec_id:string;
+    rec_upd_usr_id:string;
+    rec_upd_ts:string;
+    rec_crt_ts:string;
+  }

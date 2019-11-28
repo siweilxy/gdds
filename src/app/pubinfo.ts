@@ -1,0 +1,23 @@
+export class Pubinfo {
+    data_index:string;
+    data_tp:string;
+    pub_id_cd:string;
+    group_id:string;
+    shm_key:string;
+    sem_key:string;
+    seg_num:string;
+    upd_num:string;
+    rec_num:string;
+    rec_len:string;
+    zip_in:string;
+    enc_in:string;
+    to_tm:string;
+    resv_fld:string;
+    data_desc:string;
+    oper_in:string;
+    event_id:string;
+    rec_id:string;
+    rec_upd_usr_id:string;
+    rec_upd_ts:string;
+    rec_crt_ts:string;
+  }

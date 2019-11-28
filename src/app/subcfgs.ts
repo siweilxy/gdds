@@ -1,0 +1,25 @@
+export class Subcfg {
+    sub_id_cd:string;
+    ap_sid:string;
+    ap_tp:string;
+    rcv_limit:string;
+    updso_path:string;
+    dat_buf_num:string;
+    dat_buf_saf:string;
+    proc_mode:string;
+    get_tm_in:string;
+    no_found_md:string;
+    rsp_in:string;
+    zip_in:string;
+    enc_in:string;
+    max_rec_num:string;
+    stat_in:string;
+    sid_desc:string;
+    resv_fld:string;
+    oper_in:string;
+    event_id:string;
+    rec_id:string;
+    rec_upd_usr_id:string;
+    rec_upd_ts:string;
+    rec_crt_ts:string;
+  }
