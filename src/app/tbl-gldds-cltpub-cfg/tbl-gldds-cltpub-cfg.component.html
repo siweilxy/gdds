@@ -1,3 +1,9 @@
-<p>
-  tbl-gldds-cltpub-cfg works!
-</p>
+<h2>Pubcfgs</h2>
+
+<ul class="pubcfgs">
+  <li *ngFor="let pubcfg of pubcfgs">
+    <a routerLink="/detail/{{pubcfg.pub_id_cd}}">
+      <span class="badge">{{pubcfg.pub_id_cd}}</span> {{pubcfg.pub_id_cd}}
+    </a>
+  </li>
+</ul>
