@@ -1,3 +1,10 @@
-<p>
-  tbl-gldds-data-pub-info works!
-</p>
+<h2>Pubinfo</h2>
+
+<ul class="pubinfos">
+  <li *ngFor="let pubinfo of pubinfos">
+    <a routerLink="/detail/pubinfo/{{pubinfo.data_index}}">
+      <span class="badge">{{pubinfo.data_index}}</span> {{pubinfo.data_index}}
+    </a>
+
+  </li>
+</ul>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Pubts } from '../pubts';
+import { PubTsService } from '../pub-ts.service';
 
 @Component({
   selector: 'app-tbl-gldds-pub-ts',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tbl-gldds-pub-ts.component.css']
 })
 export class TblGlddsPubTsComponent implements OnInit {
+  pubtses:Pubts[];
 
-  constructor() { }
+  constructor(private pubtsService:PubTsService) { }
 
   ngOnInit() {
+    this.getPubtses();
+  }
+
+  getPubtses():void{
+    this.pubtsService.getPubtses().subscribe(pubtses=>this.pubtses=pubtses);
   }
 
 }

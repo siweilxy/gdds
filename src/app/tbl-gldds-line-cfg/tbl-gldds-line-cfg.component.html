@@ -1,3 +1,10 @@
-<p>
-  tbl-gldds-line-cfg works!
-</p>
+<h2>LineCfg</h2>
+
+<ul class="linecfgs">
+  <li *ngFor="let linecfg of linecfgs">
+    <a routerLink="/detail/linecfg/{{linecfg.line_no}}">
+      <span class="badge">{{linecfg.line_no}}</span> {{linecfg.line_no}}
+    </a>
+
+  </li>
+</ul>

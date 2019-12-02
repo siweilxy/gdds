@@ -15,7 +15,7 @@ const httpOptions={
 export class CltSubCfgService {
   private pubcfgUrl='api/subcfgs';
   constructor(private messageService:MessageService,private http:HttpClient) { }
-  getPubCfgs():Observable<Subcfg[]>
+  getSubCfgs():Observable<Subcfg[]>
   {
     return this.http.get<Subcfg[]>(this.pubcfgUrl).pipe(
       tap(_=>this.log('fetched cltsubcfgs')),catchError(this.handleError<Subcfg[]>('getSubCfgs',[]))

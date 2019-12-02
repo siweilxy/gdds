@@ -1,3 +1,10 @@
-<p>
-  tbl-gldds-sub-ts works!
-</p>
+<h2>Subts</h2>
+
+<ul class="subtses">
+  <li *ngFor="let subts of subtses">
+    <a routerLink="/detail/subts/{{subts.task_index}}">
+      <span class="badge">{{subts.task_index}}</span> {{subts.task_index}}
+    </a>
+
+  </li>
+</ul>

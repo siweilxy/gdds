@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Subts } from '../subts';
+import { SubTsService } from '../sub-ts.service';
 
 @Component({
   selector: 'app-tbl-gldds-sub-ts',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tbl-gldds-sub-ts.component.css']
 })
 export class TblGlddsSubTsComponent implements OnInit {
+  subtses:Subts[];
 
-  constructor() { }
+  constructor(private subtsService:SubTsService) { }
 
   ngOnInit() {
+    this.getSubtses();
+  }
+
+  getSubtses():void{
+    this.subtsService.getSubtses().subscribe(subtses=>this.subtses=subtses);
   }
 
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Linecfg } from '../linecfg';
+import { LineCfgService } from '../line-cfg.service';
 
 @Component({
   selector: 'app-tbl-gldds-line-cfg',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tbl-gldds-line-cfg.component.css']
 })
 export class TblGlddsLineCfgComponent implements OnInit {
+  linecfgs:Linecfg[];
 
-  constructor() { }
+  constructor(private linecfgsService:LineCfgService) { }
 
   ngOnInit() {
+    this.getLineCfgs();
+  }
+
+  getLineCfgs():void{
+    this.linecfgsService.getLineCfgs().subscribe(linecfgs=>this.linecfgs=linecfgs);
   }
 
 }

@@ -17,6 +17,7 @@ import { PubinfoDetailComponent } from './pubinfo-detail/pubinfo-detail.componen
 import { SubinfoDetailComponent } from './subinfo-detail/subinfo-detail.component';
 import { PubtsDetailComponent } from './pubts-detail/pubts-detail.component';
 import { LinecfgDetailComponent } from './linecfg-detail/linecfg-detail.component';
+import { SubtsDetailComponent } from './subts-detail/subts-detail.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -28,8 +29,8 @@ const routes: Routes = [
   { path: 'detail/pubinfo/:id', component: PubinfoDetailComponent },
   { path: 'detail/subinfo/:id', component: SubinfoDetailComponent },
   { path: 'detail/pubts/:id', component: PubtsDetailComponent },
-  { path: 'detail/subts/:id', component: SubcfgDetailComponent },
-  { path: 'detail/lincfg/:id', component: LinecfgDetailComponent },
+  { path: 'detail/subts/:id', component: SubtsDetailComponent },
+  { path: 'detail/linecfg/:id', component: LinecfgDetailComponent },
 
 
   { path: 'apinfos', component: TblGlddsApInfoComponent },

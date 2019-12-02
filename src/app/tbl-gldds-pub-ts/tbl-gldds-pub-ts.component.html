@@ -1,3 +1,10 @@
-<p>
-  tbl-gldds-pub-ts works!
-</p>
+<h2>Pubts</h2>
+
+<ul class="pubtses">
+  <li *ngFor="let pubts of pubtses">
+    <a routerLink="/detail/pubts/{{pubts.data_index}}">
+      <span class="badge">{{pubts.data_index}}</span> {{pubts.data_index}}
+    </a>
+
+  </li>
+</ul>

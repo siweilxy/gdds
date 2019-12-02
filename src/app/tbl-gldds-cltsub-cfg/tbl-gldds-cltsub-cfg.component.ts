@@ -17,7 +17,7 @@ export class TblGlddsCltsubCfgComponent implements OnInit {
   }
 
   getSubCfgs():void{
-    this.subcfgsService.getPubCfgs().subscribe(subcfgs=>this.subcfgs=subcfgs);
+    this.subcfgsService.getSubCfgs().subscribe(subcfgs=>this.subcfgs=subcfgs);
   }
 
 }
