@@ -20,10 +20,10 @@ export class PubcfgDetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.getApinfo();
+    this.getPubInfo();
   }
 
-  getApinfo(): void {
+  getPubInfo(): void {
     const id = this.route.snapshot.paramMap.get('id')+"";
     this.cltPubCfgService.getPubCfg(id)
       .subscribe(pubcfg => this.pubcfg = pubcfg);

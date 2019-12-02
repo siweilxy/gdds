@@ -1,3 +1,85 @@
-<p>
-  subcfg-detail works!
-</p>
+<div *ngIf="subcfg">
+
+    <h2>{{subcfg.sub_id_cd | uppercase}} Details</h2>
+    <div>
+  
+        <label> subcfg: <br>    
+        </label>
+  
+      <label>sub_id_cd:接入端标示号，取值与tbl_gldds_ap_info里的ap_id_cd一致   <br>    
+        <input [(ngModel)]="subcfg.sub_id_cd" placeholder="接入端标示号"/> 
+      </label>
+  
+      <label>ap_sid: 接入端进程编号，取值与客户端clt.cfg里的PROCESS_SID对应    <br>
+        <input [(ngModel)]="subcfg.ap_sid" placeholder="接入端进程编号，取值与客户端clt.cfg里的PROCESS_SID对应"/>
+      </label>
+      <label>ap_tp：接入端类型 02:订阅端    <br>
+        <input [(ngModel)]="subcfg.ap_tp" placeholder="02"/>
+      </label>
+      <label>rcv_limit:通讯线路上接受tsp上限，取值范围1～99999999，默认5000    <br>
+        <input [(ngModel)]="subcfg.rcv_limit" placeholder="5000"/>
+      </label>
+      <label>updso_path:引用的个性化so路径， 客户端个性化so存放绝对路径    <br>
+        <input [(ngModel)]="subcfg.updso_path" placeholder=""/>
+      </label>
+      <label>dat_buf_num:订阅端缓存空间大小，取值在20～500之间，默认200    <br>
+        <input [(ngModel)]="subcfg.dat_buf_num" placeholder="200"/>
+      </label>
+      
+      <label>dat_buf_saf:订阅端缓存空间安全阈值，取值范围在10～  dat_buf_num 之间，默认10  <br>
+        <input [(ngModel)]="subcfg.dat_buf_saf" placeholder="10"/>
+      </label>
+      
+      <label>proc_mode:订阅端处理模式 0:阻塞处理(不丢数据) 1:非阻塞处理(可能丢)   <br>
+        <input [(ngModel)]="subcfg.proc_mode" placeholder="0"/>
+      </label>
+      
+      <label>get_tm_in:订阅端是否查询任务时间片标志， 0:不查询 1:查询    <br>
+        <input [(ngModel)]="subcfg.get_tm_in" placeholder="0"/>
+      </label>
+      <label>no_found_md:更新数据找不到源数据是否插入 0:丢弃 1:插入   <br>
+        <input [(ngModel)]="subcfg.no_found_md" placeholder=""/>
+      </label>
+      <label>rsp_in:订阅端是否返回应答 0:否 1:是 默认是1    <br>
+        <input [(ngModel)]="subcfg.rsp_in" placeholder="1"/>
+      </label>
+      <label>zip_in:压缩标志 0:不压缩 1:压缩 默认压缩  <br>
+        <input [(ngModel)]="subcfg.zip_in" placeholder="1"/>
+      </label>
+      <label>enc_in:加密标志 0:不加密，1:加密   <br>
+        <input [(ngModel)]="subcfg.enc_in" placeholder=""/>
+      </label>
+      <label>max_rec_num:单个数据包最大记录笔数，默认值10，单位笔，注意max_rec_num*10 的值要小于100k    <br>
+        <input [(ngModel)]="subcfg.max_rec_num" placeholder=""/>
+      </label>
+      <label>stat_in:笔数统计标识， 0：不统计(默认值) 1:统计    <br>
+        <input [(ngModel)]="subcfg.stat_in" placeholder=""/>
+      </label>
+      <label>sid_desc:发布端进程描述，简单描述发布端任务    <br>
+        <input [(ngModel)]="subcfg.sid_desc" placeholder=""/>
+      </label>
+      <label>resv_fld:保留字段，不使用    <br>
+        <input [(ngModel)]="subcfg.resv_fld" placeholder=""/>
+      </label>
+      <label>oper_in:操作标示，i:新增记录 u:更新记录    <br>
+        <input [(ngModel)]="subcfg.oper_in" placeholder=""/>
+      </label>
+      <label>event_id:事件号，取值版本变更号    <br>
+        <input [(ngModel)]="subcfg.event_id" placeholder=""/>
+      </label>
+      <label>rec_id:记录编码，取值唯一    <br>
+        <input [(ngModel)]="subcfg.rec_id" placeholder=""/>
+      </label>
+      <label>rec_upd_usr_id:修改的用户标示，根据实际情况取值    <br>
+        <input [(ngModel)]="subcfg.rec_upd_usr_id" placeholder=""/>
+      </label>
+      <label>rec_upd_ts:修改时间，取当前时间    <br>
+        <input [(ngModel)]="subcfg.rec_upd_ts" placeholder=""/>
+      </label>
+      <label>rec_crt_ts:创建时间，取当前时间    <br>
+        <input [(ngModel)]="subcfg.rec_crt_ts" placeholder=""/>
+      </label>
+    </div>
+    <button (click)="goBack()">go back</button>
+  </div>
+  

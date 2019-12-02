@@ -1,3 +1,10 @@
-<p>
-  tbl-gldds-cltsub-cfg works!
-</p>
+<h2>Subcfgs</h2>
+
+<ul class="subcfgs">
+  <li *ngFor="let subcfg of subcfgs">
+    <a routerLink="/detail/subcfg/{{subcfg.sub_id_cd}}">
+      <span class="badge">{{subcfg.sub_id_cd}}</span> {{subcfg.sub_id_cd}}
+    </a>
+
+  </li>
+</ul>
