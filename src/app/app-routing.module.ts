@@ -11,11 +11,27 @@ import { TblGlddsDataSubInfoComponent } from './tbl-gldds-data-sub-info/tbl-gldd
 import { TblGlddsLineCfgComponent } from './tbl-gldds-line-cfg/tbl-gldds-line-cfg.component';
 import { TblGlddsPubTsComponent } from './tbl-gldds-pub-ts/tbl-gldds-pub-ts.component';
 import { TblGlddsSubTsComponent } from './tbl-gldds-sub-ts/tbl-gldds-sub-ts.component';
+import { PubcfgDetailComponent } from './pubcfg-detail/pubcfg-detail.component';
+import { SubcfgDetailComponent } from './subcfg-detail/subcfg-detail.component';
+import { PubinfoDetailComponent } from './pubinfo-detail/pubinfo-detail.component';
+import { SubinfoDetailComponent } from './subinfo-detail/subinfo-detail.component';
+import { PubtsDetailComponent } from './pubts-detail/pubts-detail.component';
+import { LinecfgDetailComponent } from './linecfg-detail/linecfg-detail.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
+  
   { path: 'detail/apinfo/:id', component: ApinfoDetailComponent },
+  { path: 'detail/pubcfg/:id', component: PubcfgDetailComponent },
+  { path: 'detail/subcfg/:id', component: SubcfgDetailComponent },
+  { path: 'detail/pubinfo/:id', component: PubinfoDetailComponent },
+  { path: 'detail/subinfo/:id', component: SubinfoDetailComponent },
+  { path: 'detail/pubts/:id', component: PubtsDetailComponent },
+  { path: 'detail/subts/:id', component: SubcfgDetailComponent },
+  { path: 'detail/lincfg/:id', component: LinecfgDetailComponent },
+
+
   { path: 'apinfos', component: TblGlddsApInfoComponent },
   { path: 'pubcfgs',component:TblGlddsCltpubCfgComponent},
   { path: 'subcfgs',component:TblGlddsCltsubCfgComponent},
