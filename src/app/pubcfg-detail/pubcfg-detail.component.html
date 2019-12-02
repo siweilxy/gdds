@@ -1,3 +1,88 @@
-<p>
-  pubcfg-detail works!
-</p>
+<div *ngIf="pubcfg">
+
+    <h2>{{pubcfg.pub_id_cd | uppercase}} Details</h2>
+    <div>
+  
+        <label> pubcfg: <br>    
+        </label>
+  
+      <label>pub_id_cd:接入端标示号，取值与tbl_gldds_ap_info里的ap_id_cd一致   <br>    
+        <input [(ngModel)]="pubcfg.pub_id_cd" placeholder="接入端标示号"/> 
+      </label>
+  
+      <label>ap_sid: 接入端进程编号，取值与客户端clt.cfg里的PROCESS_SID对应    <br>
+        <input [(ngModel)]="pubcfg.ap_sid" placeholder="接入端进程编号，取值与客户端clt.cfg里的PROCESS_SID对应"/>
+      </label>
+      <label>ap_tp：接入端类型 01:发布端，09:发布端备份进程    <br>
+        <input [(ngModel)]="pubcfg.ap_tp" placeholder="接入端类型 01:发布端，09:发布端备份进程"/>
+      </label>
+      <label>task_limit:pub进程任务发送的总tps上线，取值范围1～20000，默认1000    <br>
+        <input [(ngModel)]="pubcfg.task_limit" placeholder="pub进程任务发送的总tps上线，取值范围1～20000，默认1000"/>
+      </label>
+      <label>task_push_gap:数据分发间隔，指每个挖掘时间片之间休眠的间隔，取值范围1～3000000微妙，默认值300000    <br>
+        <input [(ngModel)]="pubcfg.task_push_gap" placeholder="数据分发间隔，指每个挖掘时间片之间休眠的间隔，取值范围1～3000000微妙，默认值300000"/>
+      </label>
+      <label>sjso_path:个性化so路径，指客户杜个性化so存放绝对路径    <br>
+        <input [(ngModel)]="pubcfg.sjso_path" placeholder="个性化so路径，指客户杜个性化so存放绝对路径"/>
+      </label>
+      
+      <label>get_tm_md:获取时间片方式，0:从服务端获取，默认 1:从配置文件[TASK_BEGEINTM]获取    <br>
+        <input [(ngModel)]="pubcfg.get_tm_md" placeholder="获取时间片方式，0:从服务端获取，默认 1:从配置文件[TASK_BEGEINTM]获取"/>
+      </label>
+      
+      <label>get_data_md:获取数据方式 0:分钟级，1:秒级   <br>
+        <input [(ngModel)]="pubcfg.get_data_md" placeholder="获取数据方式 0:分钟级，1:秒级"/>
+      </label>
+      
+      <label>min_adjust_tm:分钟级时间调整 分钟级时间片调整参数，取值 t的绝对值不大于45,单位秒    <br>
+        <input [(ngModel)]="pubcfg.min_adjust_tm" placeholder="分钟级时间调整 分钟级时间片调整参数"/>
+      </label>
+      <label>task_time_slice:分钟级时间片大小，取值1～60秒，默认3，单位秒    <br>
+        <input [(ngModel)]="pubcfg.task_time_slice" placeholder="分钟级时间片大小，取值1～60秒，默认3，单位秒"/>
+      </label>
+      <label>sec_adjust_tm:秒级时间调整，秒级时间片调整参数，取值不大于45，单位秒    <br>
+        <input [(ngModel)]="pubcfg.sec_adjust_tm" placeholder="秒级时间调整，秒级时间片调整参数，取值不大于45，单位秒"/>
+      </label>
+      <label>sec_dsipach_gap:秒级时间片范围，默认值5    <br>
+        <input [(ngModel)]="pubcfg.sec_dsipach_gap" placeholder=""/>
+      </label>
+      <label>zip_in:压缩标志，0:不压缩，1:压缩 默认值    <br>
+        <input [(ngModel)]="pubcfg.zip_in" placeholder=""/>
+      </label>
+      <label>enc_in:加密标志 0:不加密，1:加密   <br>
+        <input [(ngModel)]="pubcfg.enc_in" placeholder=""/>
+      </label>
+      <label>max_rec_num:单个数据包最大记录笔数，默认值10，单位笔，注意max_rec_num*10 的值要小于100k    <br>
+        <input [(ngModel)]="pubcfg.max_rec_num" placeholder=""/>
+      </label>
+      <label>stat_in:笔数统计标识， 0：不统计(默认值) 1:统计    <br>
+        <input [(ngModel)]="pubcfg.stat_in" placeholder=""/>
+      </label>
+      <label>sid_desc:发布端进程描述，简单描述发布端任务    <br>
+        <input [(ngModel)]="pubcfg.sid_desc" placeholder=""/>
+      </label>
+      <label>resv_fld:保留字段，不使用    <br>
+        <input [(ngModel)]="pubcfg.resv_fld" placeholder=""/>
+      </label>
+      <label>oper_in:操作标示，i:新增记录 u:更新记录    <br>
+        <input [(ngModel)]="pubcfg.oper_in" placeholder=""/>
+      </label>
+      <label>event_id:事件号，取值版本变更号    <br>
+        <input [(ngModel)]="pubcfg.event_id" placeholder=""/>
+      </label>
+      <label>rec_id:记录编码，取值唯一    <br>
+        <input [(ngModel)]="pubcfg.rec_id" placeholder=""/>
+      </label>
+      <label>rec_upd_usr_id:修改的用户标示，根据实际情况取值    <br>
+        <input [(ngModel)]="pubcfg.rec_upd_usr_id" placeholder=""/>
+      </label>
+      <label>rec_upd_ts:修改时间，取当前时间    <br>
+        <input [(ngModel)]="pubcfg.rec_upd_ts" placeholder=""/>
+      </label>
+      <label>rec_crt_ts:创建时间，取当前时间    <br>
+        <input [(ngModel)]="pubcfg.rec_crt_ts" placeholder=""/>
+      </label>
+    </div>
+    <button (click)="goBack()">go back</button>
+  </div>
+  
