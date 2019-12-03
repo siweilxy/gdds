@@ -1,3 +1,109 @@
-<p>
-  subinfo-detail works!
-</p>
+<div *ngIf="subInfo">
+
+  <h2>{{subInfo.data_index | uppercase}} Details</h2>
+  <div>
+
+      <label> subInfo: <br>    
+      </label>
+
+      <label>task_index:任务索引 根据实际情况取值，5位，例如cg001  <br>    
+        <input [(ngModel)]="subInfo.task_index" placeholder=""/> 
+      </label>
+
+    <label>data_index:数据索引 取值根据实际情况，可命名为源表名缩写，5位   <br>    
+      <input [(ngModel)]="subInfo.data_index" placeholder=""/> 
+    </label>
+    <label>sub_id_cd：订阅端编号 取值与tbl_gldds_ap_info表里的ap_id_cd一致    <br>
+      <input [(ngModel)]="subInfo.pub_id_cd" placeholder=""/>
+    </label>
+    <label>group_id:分组编号 取值与tbl_gldds_data_pub_info表中data_index对应的group_id一致<br>
+      <input [(ngModel)]="subInfo.group_id" placeholder=""/>
+    </label>
+    
+    <label>sub_seq:订阅端序列号，取值从0开始往上递增，增量为1，如果同样的data_index对应多个task_index，sub_seq不能重复<br>
+      <input [(ngModel)]="subInfo.sub_seq" placeholder=""/>
+    </label>
+
+    <label>sub_conum:订阅任务并发数，默认填2<br>
+      <input [(ngModel)]="subInfo.sub_conum" placeholder=""/>
+    </label>
+
+    <label>consist_in:一致性标志 0:非严格一致性 1:严格一致性<br>
+      <input [(ngModel)]="subInfo.consist_in" placeholder=""/>
+    </label>
+
+    <label>fall_in:任务分发模式 0:普通分发 1:落地分发即先记文件再发 2:自动切换 异常情况自动切换到文件分发<br>
+      <input [(ngModel)]="subInfo.fall_in" placeholder=""/>
+    </label>
+
+    <label>conv_in:形变编号 取值为空格<br>
+      <input [(ngModel)]="subInfo.conv_in" placeholder=""/>
+    </label>
+    
+    <label>filter_in:过滤标示，默认值为0<br>
+      <input [(ngModel)]="subInfo.filter_in" placeholder=""/>
+    </label>
+
+    <label>filter_id:过滤编号 取值为空格<br>
+      <input [(ngModel)]="subInfo.filter_id" placeholder=""/>
+    </label>
+
+    <label>zip_in:压缩标示 取值为默认值1<br>
+      <input [(ngModel)]="subInfo.zip_in" placeholder=""/>
+    </label>
+
+    <label>enc_in:加密标示，0:不使用md5校验，1:使用md5校验<br>
+      <input [(ngModel)]="subInfo.enc_in" placeholder=""/>
+    </label>
+
+    <label>data_enc_md:传输加密方式 默认值00<br>
+      <input [(ngModel)]="subInfo.data_enc_md" placeholder="00"/>
+    </label>
+
+    <label>data_enc_key:数据传输密钥 默认值空格<br>
+      <input [(ngModel)]="subInfo.data_enc_key" placeholder=" "/>
+    </label>
+
+    <label>rec_len:订阅记录长度 取值为目标数据的长度，这里建议配成和tbl_gldds_data_pub_info里的rec_len一致<br>
+      <input [(ngModel)]="subInfo.rec_len" placeholder=" "/>
+    </label>
+
+    <label>bat_num:批量记录数 取值根据实际情况，如果单条数据在10000byte以下的建议配成10，始终保持rec_len*bat_num小于409600<br>
+      <input [(ngModel)]="subInfo.bat_num" placeholder=" "/>
+    </label>
+
+    <label>to_tm:超时时间，默认值30<br>
+      <input [(ngModel)]="subInfo.to_tm" placeholder="30"/>
+    </label>
+
+    <label>task_desc:描述，取值对任务的简单描述<br>
+      <input [(ngModel)]="subInfo.task_desc" placeholder=""/>
+    </label>
+
+    <label>resv_fld:保留字段 取值保留字段<br>
+      <input [(ngModel)]="subInfo.resv_fld" placeholder="保留字段"/>
+    </label>
+
+    <label>oper_in:操作标示 新增记录取值i 更新记录取值u<br>
+      <input [(ngModel)]="subInfo.oper_in" placeholder=""/>
+    </label>
+    
+    <label>event_id:事件号，取值版本变更号    <br>
+      <input [(ngModel)]="pubInfo.event_id" placeholder=""/>
+    </label>
+    <label>rec_id:记录编码，取值唯一    <br>
+      <input [(ngModel)]="pubInfo.rec_id" placeholder=""/>
+    </label>
+    <label>rec_upd_usr_id:修改的用户标示，根据实际情况取值    <br>
+      <input [(ngModel)]="pubInfo.rec_upd_usr_id" placeholder=""/>
+    </label>
+    <label>rec_upd_ts:修改时间，取当前时间    <br>
+      <input [(ngModel)]="pubInfo.rec_upd_ts" placeholder=""/>
+    </label>
+    <label>rec_crt_ts:创建时间，取当前时间    <br>
+      <input [(ngModel)]="pubInfo.rec_crt_ts" placeholder=""/>
+    </label>
+
+  </div>
+  <button (click)="goBack()">go back</button>
+</div>

@@ -1,15 +1,40 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+
+import { Subts }         from '../subts';
+import { SubTsService }  from '../sub-ts.service';
 
 @Component({
-  selector: 'app-subts-detail',
+  selector: 'subts-detail',
   templateUrl: './subts-detail.component.html',
-  styleUrls: ['./subts-detail.component.css']
+  styleUrls: [ './subts-detail.component.css' ]
 })
 export class SubtsDetailComponent implements OnInit {
+  @Input() subts: Subts;
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private SubtsService: SubTsService,
+    private location: Location
+  ) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.getSubts();
   }
 
+  getSubts(): void {
+    const id = this.route.snapshot.paramMap.get('id')+"";
+    this.SubtsService.getSubts(id)
+      .subscribe(subts => this.subts = subts);
+  }
+
+  goBack(): void {
+    this.location.back();
+  }
+
+  // save(): void {
+  //   this.cltPubCfgService(this.pubcfg)
+  //     .subscribe(() => this.goBack());
+  // }
 }

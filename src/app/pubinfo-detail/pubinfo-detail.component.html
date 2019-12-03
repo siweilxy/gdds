@@ -1,3 +1,73 @@
-<p>
-  pubinfo-detail works!
-</p>
+<div *ngIf="pubInfo">
+
+  <h2>{{pubInfo.data_index | uppercase}} Details</h2>
+  <div>
+
+      <label> pubInfo: <br>    
+      </label>
+    <label>data_index:数据索引 取值根据实际情况，可命名为源表名缩写，，5位   <br>    
+      <input [(ngModel)]="pubInfo.data_index" placeholder=""/> 
+    </label>
+    <label>data_tp: 数据类型，取值与data_index一致    <br>
+      <input [(ngModel)]="pubInfo.data_tp" placeholder=""/>
+    </label>
+    <label>pub_id_cd：发布端编号 取值与tbl_gldds_ap_info表里的ap_id_cd一致    <br>
+      <input [(ngModel)]="pubInfo.pub_id_cd" placeholder=""/>
+    </label>
+    <label>group_id:分组编号 发布端应用所在分组编号，目前已有分组编号：GAC04：全渠道组 GCH05:钱包组 GIB01:国业组 GMA03:多渠道组 GPA02:收单组 GYY01:应用一组 GYY02:应用二组 GYY03:互联网组<br>
+      <input [(ngModel)]="pubInfo.group_id" placeholder=""/>
+    </label>
+    <label>shm_key:缓存共享内存key 需发信给范钱泽进行申请    <br>
+      <input [(ngModel)]="pubInfo.shm_key" placeholder=""/>
+    </label>
+    <label>sem_key:缓存信号量key 需发信给范钱泽进行申请   <br>
+      <input [(ngModel)]="pubInfo.sem_key" placeholder=""/>
+    </label>
+    <label>seg_num 缓存段数，取值根据业务量如tps来设置，例如5，10   <br>
+      <input [(ngModel)]="pubInfo.seg_num" placeholder=""/>
+    </label>
+    <label>upd_num:更新段数，根据时间片内新增数据与更新数据的量比进行配置，且取值小于等于seg_num  <br>
+      <input [(ngModel)]="pubInfo.upd_num" placeholder=""/>
+    </label>
+    <label>rec_num:每段记录数 取值根据业务量如tps量设置，只要保证seg_num*rec_num大于tps即可    <br>
+      <input [(ngModel)]="pubInfo.rec_num" placeholder=""/>
+    </label>
+    <label>rec_len:源记录长度 取值为数据源挖掘的单条记录大小    <br>
+      <input [(ngModel)]="pubInfo.rec_len" placeholder=""/>
+    </label>
+    <label>zip_in:压缩标志，取值为1    <br>
+      <input [(ngModel)]="pubInfo.zip_in" placeholder="1"/>
+    </label>
+    <label>enc_in:加密标志 取值为0   <br>
+      <input [(ngModel)]="pubInfo.enc_in" placeholder="0"/>
+    </label>
+    <label>data_desc:数据描述 取值为源表名即可    <br>
+      <input [(ngModel)]="pubInfo.data_desc" placeholder=""/>
+    </label>
+    <label>to_tm:超时时间，取值45 <br>
+      <input [(ngModel)]="pubInfo.to_tm" placeholder=""/>
+    </label>
+    <label>resv_fld:保留字段，不使用    <br>
+      <input [(ngModel)]="pubInfo.resv_fld" placeholder=""/>
+    </label>
+    <label>oper_in:操作标示，i:新增记录 u:更新记录    <br>
+      <input [(ngModel)]="pubInfo.oper_in" placeholder=""/>
+    </label>
+    <label>event_id:事件号，取值版本变更号    <br>
+      <input [(ngModel)]="pubInfo.event_id" placeholder=""/>
+    </label>
+    <label>rec_id:记录编码，取值唯一    <br>
+      <input [(ngModel)]="pubInfo.rec_id" placeholder=""/>
+    </label>
+    <label>rec_upd_usr_id:修改的用户标示，根据实际情况取值    <br>
+      <input [(ngModel)]="pubInfo.rec_upd_usr_id" placeholder=""/>
+    </label>
+    <label>rec_upd_ts:修改时间，取当前时间    <br>
+      <input [(ngModel)]="pubInfo.rec_upd_ts" placeholder=""/>
+    </label>
+    <label>rec_crt_ts:创建时间，取当前时间    <br>
+      <input [(ngModel)]="pubInfo.rec_crt_ts" placeholder=""/>
+    </label>
+  </div>
+  <button (click)="goBack()">go back</button>
+</div>
