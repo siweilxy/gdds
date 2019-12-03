@@ -1,3 +1,88 @@
-<p>
-  linecfg-detail works!
-</p>
+<div *ngIf="linecfg">
+
+  <h2>{{linecfg.line_no | uppercase}} Details</h2>
+  <div>
+
+      <label> linecfg: <br>    
+      </label>
+
+    <label>line_no:线路编号 需要申请，请发信给范钱泽或者赵根苗   <br>    
+      <input [(ngModel)]="linecfg.line_no" placeholder=""/> 
+    </label>
+
+    <label>session_id: 连接标示号，需要申请，请发信给范钱泽或者赵根苗     <br>
+      <input [(ngModel)]="linecfg.session_id" placeholder=""/>
+    </label>
+    <label>cgwsvr_id 通信进程标示号  需要申请，请发信给范钱泽或者赵根苗  <br>
+      <input [(ngModel)]="linecfg.cgwsvr_id" placeholder=""/>
+    </label>
+    <label>svc_nm:通讯服务名 取值根据cgwsvr_id的分配情况，例如cgwsvr_id为A3100 那么svc_nm为DDS_CGW_A3100    <br>
+      <input [(ngModel)]="linecfg.svc_nm" placeholder=""/>
+    </label>
+    <label>ap_id_cd:接入端标示号 取值与tbl_gldds_ap_info表里的ap_id_cd 一致   <br>
+      <input [(ngModel)]="linecfg.ap_id_cd" placeholder=""/>
+    </label>
+    <label>ap_sid:接入端进程号 取值与客户端clt.cfg里的PROCESS_SID对应<br>
+      <input [(ngModel)]="linecfg.ap_sid" placeholder=""/>
+    </label>
+    
+    <label>line_tp:线路类型 取值根据接入端性质来设置，发布端：01 订阅端：02 发布端：09  <br>
+      <input [(ngModel)]="linecfg.line_tp" placeholder=""/>
+    </label>
+    
+    <label>line_st:线路状态 取值默认为0 0表示线路断开，2表示连接  <br>
+      <input [(ngModel)]="linecfg.line_st" placeholder="0"/>
+    </label>
+    
+    <label>log_switch_in:线路日志开关 默认值为0     <br>
+      <input [(ngModel)]="linecfg.log_switch_in" placeholder=""/>
+    </label>
+    <label>host_id:主机编号，取值为通信主机编号，01或者02    <br>
+      <input [(ngModel)]="linecfg.host_id" placeholder=""/>
+    </label>
+    <label>local_ip_addr:本地ip地址 取值为gdds通信主机的ip地址  <br>
+      <input [(ngModel)]="linecfg.local_ip_addr" placeholder=""/>
+    </label>
+    <label>local_port_no:本地端口号 需申请 发信给范钱泽或者赵根苗    <br>
+      <input [(ngModel)]="linecfg.local_port_no" placeholder=""/>
+    </label>
+
+    <label>remote_ip_addr:远端ip地址 取值为客户端所在机器的ip地址  <br>
+      <input [(ngModel)]="linecfg.remote_ip_addr" placeholder=""/>
+    </label>
+    <label>remote_port_no:远端端口号 取值可以与local_port_no一致    <br>
+      <input [(ngModel)]="linecfg.remote_port_no" placeholder=""/>
+    </label>
+
+    <label>max_tps:最大限速    <br>
+      <input [(ngModel)]="linecfg.max_tps" placeholder=""/>
+    </label>
+
+    <label>conm_snd_buf_size:通信缓冲区队列长默认值为100  <br>
+      <input [(ngModel)]="linecfg.conm_snd_buf_size" placeholder="100"/>
+    </label>
+    <label>sync_in:同步标示 取值默认为1   <br>
+      <input [(ngModel)]="linecfg.sync_in" placeholder=""/>
+    </label>
+
+    <label>oper_in:操作标示，i:新增记录 u:更新记录    <br>
+      <input [(ngModel)]="linecfg.oper_in" placeholder=""/>
+    </label>
+    <label>event_id:事件号，取值版本变更号    <br>
+      <input [(ngModel)]="linecfg.event_id" placeholder=""/>
+    </label>
+    <label>rec_id:记录编码，取值唯一    <br>
+      <input [(ngModel)]="linecfg.rec_id" placeholder=""/>
+    </label>
+    <label>rec_upd_usr_id:修改的用户标示，根据实际情况取值    <br>
+      <input [(ngModel)]="linecfg.rec_upd_usr_id" placeholder=""/>
+    </label>
+    <label>rec_upd_ts:修改时间，取当前时间    <br>
+      <input [(ngModel)]="linecfg.rec_upd_ts" placeholder=""/>
+    </label>
+    <label>rec_crt_ts:创建时间，取当前时间    <br>
+      <input [(ngModel)]="linecfg.rec_crt_ts" placeholder=""/>
+    </label>
+  </div>
+  <button (click)="goBack()">go back</button>
+</div>
