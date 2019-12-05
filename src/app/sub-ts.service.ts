@@ -23,7 +23,7 @@ export class SubTsService {
   }
 
   getSubts(id:string):Observable<Subts>{
-    const url=`${this.url}/?id=${id}`;
+    const url=`${this.url}/${id}`;
     return this.http.get<Subts>(url).pipe(
       tap(_=>this.log(`fetched Subts id=${id}`)),catchError(this.handleError<Subts>(`getSubts id=${id}`))
     );

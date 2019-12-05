@@ -23,7 +23,7 @@ export class SubInfoService {
   }
 
   getSubInfo(id:string):Observable<Subinfo>{
-    const url=`${this.url}/?id=${id}`;
+    const url=`${this.url}/${id}`;
     return this.http.get<Subinfo>(url).pipe(
       tap(_=>this.log(`fetched SubInfo id=${id}`)),catchError(this.handleError<Subinfo>(`getSubInfo id=${id}`))
     );

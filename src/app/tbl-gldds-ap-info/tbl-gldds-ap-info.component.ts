@@ -18,7 +18,7 @@ export class TblGlddsApInfoComponent implements OnInit {
   }
 
   // onSelect(apinfo: ApInfo): void {
-  //   this.selectedApInfo = apinfo;
+  //   this.apinfos = apinfo;
   // }
 
   getApInfos(): void {

@@ -23,7 +23,7 @@ export class LineCfgService {
   }
 
   getLineCfg(id:string):Observable<Linecfg>{
-    const url=`${this.linecfgUrl}/?id=${id}`;
+    const url=`${this.linecfgUrl}/${id}`;
     return this.http.get<Linecfg>(url).pipe(
       tap(_=>this.log(`fetched linecfg id=${id}`)),catchError(this.handleError<Linecfg>(`getlinecfg id=${id}`))
     );

@@ -23,7 +23,7 @@ export class CltPubCfgService {
   }
 
   getPubCfg(id:string):Observable<Pubcfg>{
-    const url=`${this.pubcfgUrl}/?id=${id}`;
+    const url=`${this.pubcfgUrl}/${id}`;
     return this.http.get<Pubcfg>(url).pipe(
       tap(_=>this.log(`fetched pubcfg id=${id}`)),catchError(this.handleError<Pubcfg>(`getpubcfg id=${id}`))
     );

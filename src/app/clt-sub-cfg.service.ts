@@ -23,7 +23,7 @@ export class CltSubCfgService {
   }
 
   getSubCfg(id:string):Observable<Subcfg>{
-    const url=`${this.pubcfgUrl}/?id=${id}`;
+    const url=`${this.pubcfgUrl}/${id}`;
     return this.http.get<Subcfg>(url).pipe(
       tap(_=>this.log(`fetched subcfg id=${id}`)),catchError(this.handleError<Subcfg>(`getsubcfg id=${id}`))
     );

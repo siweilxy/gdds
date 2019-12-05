@@ -23,7 +23,7 @@ export class PubInfoService {
   }
 
   getPubInfo(id:string):Observable<Pubinfo>{
-    const url=`${this.url}/?id=${id}`;
+    const url=`${this.url}/${id}`;
     return this.http.get<Pubinfo>(url).pipe(
       tap(_=>this.log(`fetched Pubinfo id=${id}`)),catchError(this.handleError<Pubinfo>(`getPubinfo id=${id}`))
     );

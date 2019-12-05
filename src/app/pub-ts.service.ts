@@ -23,7 +23,7 @@ export class PubTsService {
   }
 
   getPubts(id:string):Observable<Pubts>{
-    const url=`${this.url}/?id=${id}`;
+    const url=`${this.url}/${id}`;
     return this.http.get<Pubts>(url).pipe(
       tap(_=>this.log(`fetched Pubts id=${id}`)),catchError(this.handleError<Pubts>(`getPubts id=${id}`))
     );
