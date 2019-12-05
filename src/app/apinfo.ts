@@ -13,7 +13,7 @@ export class ApInfo {
     db_in:string;
     db_name:string;
     db_connect_time_out:string;
-    db_receive_time_out:string;
+    db_recieve_time_out:string;
     data_num:string;
     reformat_in:string;
     clt_module:string;
