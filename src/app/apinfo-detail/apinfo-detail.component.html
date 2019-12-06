@@ -1,5 +1,9 @@
 <div *ngIf="apinfo">
-
+    <nav>
+        <!-- <a routerLink="/dashboard">Dashboard</a> -->
+        <a routerLink="/allPubs/{{apinfo.ap_id_cd}}">{{apinfo.ap_id_cd}}-AllPubs</a>
+        <a routerLink="/allSubs/{{apinfo.ap_id_cd}}">{{apinfo.ap_id_cd}}-AllSubs</a>
+      </nav>
   <h2>{{apinfo.ap_id_cd | uppercase}} Details</h2>
   <div>
 
@@ -9,7 +13,6 @@
     <label>ap_id_cd:接入机构码    <br>    
       <input [(ngModel)]="apinfo.ap_id_cd" placeholder="接入机构码"/> 
     </label>
-
     <label>ap_st:机构状态，取默认值 1    <br>
       <input [(ngModel)]="apinfo.ap_st" placeholder="机构状态，取默认值 1"/>
     </label>
@@ -100,8 +103,10 @@
     <label>rec_crt_ts:取当前时间    <br>
       <input [(ngModel)]="apinfo.rec_crt_ts" placeholder="取当前时间"/>
     </label>
-
   </div>
+
+ 
+
   <button (click)="goBack()">go back</button>
   <button (click)="save()">save</button>
 </div>

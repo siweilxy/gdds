@@ -24,7 +24,7 @@ export class PubInfoDetailComponent implements OnInit {
   }
 
   getPubInfo(): void {
-    const id = this.route.snapshot.paramMap.get('id')+"";
+    const id = this.route.snapshot.paramMap.get('data_index')+"";
     this.cltPubInfoService.getPubInfo(id)
       .subscribe(pubInfo => this.pubInfo = pubInfo);
   }

@@ -24,7 +24,7 @@ export class ApinfoDetailComponent implements OnInit {
   }
 
   getApinfo(): void {
-    const id = this.route.snapshot.paramMap.get('id')+"";
+    const id = this.route.snapshot.paramMap.get('ap_id_cd')+"";
     this.apinfoService.getApInfo(id)
       .subscribe(apinfo => this.apinfo = apinfo);
   }

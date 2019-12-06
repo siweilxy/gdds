@@ -30,23 +30,27 @@ export class ApInfoService {
   }
 
     /** GET hero by id. Return `undefined` when id not found */
-    getApinfoNo404<Data>(id: string): Observable<ApInfo> {
-      const url = `${this.apinfosUrl}/:id=${id}`;
-      return this.http.get<ApInfo[]>(url)
-        .pipe(
-          map(apinfos => apinfos[0]), // returns a {0|1} element array
-          tap(h => {
-            const outcome = h ? `fetched` : `did not find`;
-            this.log(`${outcome} apinfo id=${id}`);
-          }),
-          catchError(this.handleError<ApInfo>(`getApinfo id=${id}`))
-        );
-    }
+    // getApinfoNo404<Data>(id: string): Observable<ApInfo> {
+    //   const url = `${this.apinfosUrl}/:id=${id}`;
+    //   return this.http.get<ApInfo[]>(url)
+    //     .pipe(
+    //       map(apinfos => apinfos[0]), // returns a {0|1} element array
+    //       tap(h => {
+    //         const outcome = h ? `fetched` : `did not find`;
+    //         this.log(`${outcome} apinfo id=${id}`);
+    //       }),
+    //       catchError(this.handleError<ApInfo>(`getApinfo id=${id}`))
+    //     );
+    // }
 
   getApInfo(id: string): Observable<ApInfo> {
     // TODO: send the message _after_ fetching the apinfo
     //this.messageService.add(`ApInfoService: fetched apinfo id=${id}`);
     const url = `${this.apinfosUrl}/${id}`;
+
+    //const url = `${this.apinfosUrl}/?:ap_id_cd=${id}`;
+
+
     // return this.http.get<ApInfo>(url).pipe(
     //   tap(_=>this.log(`fetched apinfo id =${id}`)),catchError(this.handleError<ApInfo>(`getApinfo id=${id}`))
     // );

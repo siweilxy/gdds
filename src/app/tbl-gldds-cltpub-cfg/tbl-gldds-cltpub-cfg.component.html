@@ -1,9 +1,9 @@
 <h2>Pubcfgs</h2>
-
+        
 <ul class="pubcfgs">
   <li *ngFor="let pubcfg of pubcfgs">
     <a routerLink="/detail/pubcfg/{{pubcfg.pub_id_cd}}/{{pubcfg.ap_sid}}/{{pubcfg.ap_tp}}">
-      <span class="badge">{{pubcfg.pub_id_cd}}</span> {{pubcfg.pub_id_cd}}
+      <span class="badge">{{pubcfg.pub_id_cd}}</span> {{pubcfg.ap_sid}} {{pubcfg.ap_tp}}
     </a>
 
   </li>

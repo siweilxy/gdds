@@ -24,7 +24,7 @@ export class SubtsDetailComponent implements OnInit {
   }
 
   getSubts(): void {
-    const id = this.route.snapshot.paramMap.get('id')+"";
+    const id = this.route.snapshot.paramMap.get('task_index')+"";
     const host_id=this.route.snapshot.paramMap.get('host_id')+"";
     this.SubtsService.getSubts(id,host_id)
       .subscribe(subts => this.subts = subts);

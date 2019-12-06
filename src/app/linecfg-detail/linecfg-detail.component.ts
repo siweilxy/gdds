@@ -24,7 +24,7 @@ export class LinecfgDetailComponent implements OnInit {
   }
 
   getLineCfg(): void {
-    const id = this.route.snapshot.paramMap.get('id')+"";
+    const id = this.route.snapshot.paramMap.get('line_no')+"";
     this.lineCfgService.getLineCfg(id)
       .subscribe(linecfg => this.linecfg = linecfg);
   }

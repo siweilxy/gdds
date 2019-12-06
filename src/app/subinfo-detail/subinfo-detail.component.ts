@@ -24,7 +24,7 @@ export class SubInfoDetailComponent implements OnInit {
   }
 
   getSubInfo(): void {
-    const id = this.route.snapshot.paramMap.get('id')+"";
+    const id = this.route.snapshot.paramMap.get('task_index')+"";
     this.cltSubInfoService.getSubInfo(id)
       .subscribe(pubInfo => this.subInfo = pubInfo);
   }

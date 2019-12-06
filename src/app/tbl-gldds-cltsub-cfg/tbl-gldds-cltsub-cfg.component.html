@@ -3,7 +3,7 @@
 <ul class="subcfgs">
   <li *ngFor="let subcfg of subcfgs">
     <a routerLink="/detail/subcfg/{{subcfg.sub_id_cd}}/{{subcfg.ap_sid}}/{{subcfg.ap_tp}}">
-      <span class="badge">{{subcfg.sub_id_cd}}</span> {{subcfg.sub_id_cd}}
+      <span class="badge">{{subcfg.sub_id_cd}}</span> {{subcfg.ap_sid}}  {{subcfg.ap_tp}}
     </a>
 
   </li>

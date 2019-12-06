@@ -23,14 +23,14 @@ const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
   
-  { path: 'detail/apinfo/:id', component: ApinfoDetailComponent },
-  { path: 'detail/pubcfg/:id/:ap_sid/:ap_tp', component: PubcfgDetailComponent },
-  { path: 'detail/subcfg/:id/:ap_sid/:ap_tp', component: SubcfgDetailComponent },
-  { path: 'detail/pubinfo/:id', component: PubInfoDetailComponent },
-  { path: 'detail/subinfo/:id', component: SubInfoDetailComponent },
-  { path: 'detail/pubts/:id', component: PubtsDetailComponent },
-  { path: 'detail/subts/:id/:host_id', component: SubtsDetailComponent },
-  { path: 'detail/linecfg/:id', component: LinecfgDetailComponent },
+  { path: 'detail/apinfo/:ap_id_cd', component: ApinfoDetailComponent },
+  { path: 'detail/pubcfg/:pub_id_cd/:ap_sid/:ap_tp', component: PubcfgDetailComponent },
+  { path: 'detail/subcfg/:sub_id_cd/:ap_sid/:ap_tp', component: SubcfgDetailComponent },
+  { path: 'detail/pubinfo/:data_index', component: PubInfoDetailComponent },
+  { path: 'detail/subinfo/:task_index', component: SubInfoDetailComponent },
+  { path: 'detail/pubts/:data_index', component: PubtsDetailComponent },
+  { path: 'detail/subts/:task_index/:host_id', component: SubtsDetailComponent },
+  { path: 'detail/linecfg/:line_no', component: LinecfgDetailComponent },
 
 
   { path: 'apinfos', component: TblGlddsApInfoComponent },

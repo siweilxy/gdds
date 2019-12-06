@@ -24,7 +24,7 @@ export class PubtsDetailComponent implements OnInit {
   }
 
   getPubts(): void {
-    const id = this.route.snapshot.paramMap.get('id')+"";
+    const id = this.route.snapshot.paramMap.get('data_index')+"";
     this.pubtsService.getPubts(id)
       .subscribe(pubts => this.pubts = pubts);
   }
