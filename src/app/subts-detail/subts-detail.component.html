@@ -3,30 +3,58 @@
   <h2>{{subts.data_index | uppercase}} Details</h2>
   <div>
 
-      <label> pubts: <br>    
+      <label> subts: <br>    
       </label>
-    <label>data_index:数据索引 与tbl_gldds_data_pub_info里的data_index保持一致  <br>    
-      <input [(ngModel)]="subts.data_index" placeholder=""/> 
+    <label>task_index:任务索引 与tbl_gldds_data_sub_info里的task_index保持一致  <br>    
+      <input [(ngModel)]="subts.task_index" placeholder=""/> 
     </label>
-    <label>pub_id_cd：发布端编号 取值与tbl_gldds_ap_info表里的ap_id_cd一致    <br>
-      <input [(ngModel)]="subts.pub_id_cd" placeholder=""/>
+
+    <label>host_id:主机编号 取值 11-应用主机11，12-应用主机12  <br>    
+      <input [(ngModel)]="subts.host_id" placeholder=""/> 
     </label>
+
+    <label>sub_id_cd：订阅编号 取值与tbl_gldds_ap_info表里的ap_id_cd一致    <br>
+      <input [(ngModel)]="subts.sub_id_cd" placeholder=""/>
+    </label>
+
+    <label>data_index 数据索引，取值与tbl_gldds_data_pub_info里的data_index保持一致    <br>
+      <input [(ngModel)]="subts.data_index" placeholder=""/>
+    </label>
+
+    <label>host_st 主机状态 取1    <br>
+      <input [(ngModel)]="subts.host_st" placeholder="1"/>
+    </label>
+
     <label>data_tp:数据类型 取值与tbl_gldds_data_pub_info里的data_index保持一致<br>
       <input [(ngModel)]="subts.data_tp" placeholder=""/>
     </label>
+
     <label>allow_time:时间片允许的误差范围 默认值900 单位秒    <br>
       <input [(ngModel)]="subts.allow_time" placeholder="900"/>
     </label>
    
-   
     <label>mon_in:监控记录 0:不监控 1:监控    <br>
       <input [(ngModel)]="subts.mon_in" placeholder="1"/>
     </label>
+
     <label>data_desc:源数据描述 取值根据实际情况对数据源进行简单描述    <br>
       <input [(ngModel)]="subts.data_desc" placeholder=""/>
     </label>
-    <label>pub_fin_ts:发布完成时间   <br>
-      <input [(ngModel)]="subts.pub_fin_ts" placeholder=""/>
+    <label>sub_fin_ts:订阅完成时间   <br>
+      <input [(ngModel)]="subts.sub_fin_ts" placeholder=""/>
+    </label>
+
+    <label>oper_in:操作标示，i:新增记录 u:更新记录    <br>
+      <input [(ngModel)]="subts.oper_in" placeholder=""/>
+    </label>
+    <label>event_id:事件号，取值版本变更号    <br>
+      <input [(ngModel)]="subts.event_id" placeholder=""/>
+    </label>
+    <label>rec_id:记录编码，取值唯一    <br>
+      <input [(ngModel)]="subts.rec_id" placeholder=""/>
+    </label>
+    <label>rec_upd_usr_id:修改的用户标示，根据实际情况取值    <br>
+      <input [(ngModel)]="subts.rec_upd_usr_id" placeholder=""/>
     </label>
     <label>rec_upd_ts:修改时间，取当前时间    <br>
       <input [(ngModel)]="subts.rec_upd_ts" placeholder=""/>
@@ -34,6 +62,7 @@
     <label>rec_crt_ts:创建时间，取当前时间    <br>
       <input [(ngModel)]="subts.rec_crt_ts" placeholder=""/>
     </label>
+
   </div>
   <button (click)="goBack()">go back</button>
 </div>

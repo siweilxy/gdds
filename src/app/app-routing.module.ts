@@ -24,12 +24,12 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   
   { path: 'detail/apinfo/:id', component: ApinfoDetailComponent },
-  { path: 'detail/pubcfg/:id', component: PubcfgDetailComponent },
-  { path: 'detail/subcfg/:id', component: SubcfgDetailComponent },
+  { path: 'detail/pubcfg/:id/:ap_sid/:ap_tp', component: PubcfgDetailComponent },
+  { path: 'detail/subcfg/:id/:ap_sid/:ap_tp', component: SubcfgDetailComponent },
   { path: 'detail/pubinfo/:id', component: PubInfoDetailComponent },
   { path: 'detail/subinfo/:id', component: SubInfoDetailComponent },
   { path: 'detail/pubts/:id', component: PubtsDetailComponent },
-  { path: 'detail/subts/:id', component: SubtsDetailComponent },
+  { path: 'detail/subts/:id/host_id', component: SubtsDetailComponent },
   { path: 'detail/linecfg/:id', component: LinecfgDetailComponent },
 
 

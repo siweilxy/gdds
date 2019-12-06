@@ -2,8 +2,8 @@
 
 <ul class="subtses">
   <li *ngFor="let subts of subtses">
-    <a routerLink="/detail/subts/{{subts.task_index}}">
-      <span class="badge">{{subts.task_index}}</span> {{subts.task_index}}
+    <a routerLink="/detail/subts/{{subts.task_index}}/{{subts.host_id}}">
+      <span class="badge">{{subts.task_index}}</span> {{subts.host_id}}
     </a>
 
   </li>

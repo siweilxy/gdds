@@ -25,7 +25,9 @@ export class SubcfgDetailComponent implements OnInit {
 
   getSubInfo(): void {
     const id = this.route.snapshot.paramMap.get('id')+"";
-    this.cltSubCfgService.getSubCfg(id)
+    const ap_sid = this.route.snapshot.paramMap.get('ap_sid')+"";
+    const ap_tp = this.route.snapshot.paramMap.get("ap_tp")+"";
+    this.cltSubCfgService.getSubCfg(id,ap_sid,ap_tp)
       .subscribe(subcfg => this.subcfg = subcfg);
   }
 

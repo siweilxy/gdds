@@ -28,6 +28,19 @@
     <label>pub_fin_ts:发布完成时间   <br>
       <input [(ngModel)]="pubts.pub_fin_ts" placeholder=""/>
     </label>
+
+    <label>oper_in:操作标示，i:新增记录 u:更新记录    <br>
+      <input [(ngModel)]="pubts.oper_in" placeholder=""/>
+    </label>
+    <label>event_id:事件号，取值版本变更号    <br>
+      <input [(ngModel)]="pubts.event_id" placeholder=""/>
+    </label>
+    <label>rec_id:记录编码，取值唯一    <br>
+      <input [(ngModel)]="pubts.rec_id" placeholder=""/>
+    </label>
+    <label>rec_upd_usr_id:修改的用户标示，根据实际情况取值    <br>
+      <input [(ngModel)]="pubts.rec_upd_usr_id" placeholder=""/>
+    </label>
     <label>rec_upd_ts:修改时间，取当前时间    <br>
       <input [(ngModel)]="pubts.rec_upd_ts" placeholder=""/>
     </label>

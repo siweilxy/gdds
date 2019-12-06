@@ -14,7 +14,7 @@
       <input [(ngModel)]="subInfo.data_index" placeholder=""/> 
     </label>
     <label>sub_id_cd：订阅端编号 取值与tbl_gldds_ap_info表里的ap_id_cd一致    <br>
-      <input [(ngModel)]="subInfo.pub_id_cd" placeholder=""/>
+      <input [(ngModel)]="subInfo.sub_id_cd" placeholder=""/>
     </label>
     <label>group_id:分组编号 取值与tbl_gldds_data_pub_info表中data_index对应的group_id一致<br>
       <input [(ngModel)]="subInfo.group_id" placeholder=""/>
@@ -89,19 +89,19 @@
     </label>
     
     <label>event_id:事件号，取值版本变更号    <br>
-      <input [(ngModel)]="pubInfo.event_id" placeholder=""/>
+      <input [(ngModel)]="subInfo.event_id" placeholder=""/>
     </label>
     <label>rec_id:记录编码，取值唯一    <br>
-      <input [(ngModel)]="pubInfo.rec_id" placeholder=""/>
+      <input [(ngModel)]="subInfo.rec_id" placeholder=""/>
     </label>
     <label>rec_upd_usr_id:修改的用户标示，根据实际情况取值    <br>
-      <input [(ngModel)]="pubInfo.rec_upd_usr_id" placeholder=""/>
+      <input [(ngModel)]="subInfo.rec_upd_usr_id" placeholder=""/>
     </label>
     <label>rec_upd_ts:修改时间，取当前时间    <br>
-      <input [(ngModel)]="pubInfo.rec_upd_ts" placeholder=""/>
+      <input [(ngModel)]="subInfo.rec_upd_ts" placeholder=""/>
     </label>
     <label>rec_crt_ts:创建时间，取当前时间    <br>
-      <input [(ngModel)]="pubInfo.rec_crt_ts" placeholder=""/>
+      <input [(ngModel)]="subInfo.rec_crt_ts" placeholder=""/>
     </label>
 
   </div>

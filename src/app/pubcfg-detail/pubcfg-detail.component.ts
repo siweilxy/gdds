@@ -25,7 +25,9 @@ export class PubcfgDetailComponent implements OnInit {
 
   getPubInfo(): void {
     const id = this.route.snapshot.paramMap.get('id')+"";
-    this.cltPubCfgService.getPubCfg(id)
+    const ap_sid = this.route.snapshot.paramMap.get('ap_sid')+"";
+    const ap_tp = this.route.snapshot.paramMap.get("ap_tp")+"";
+    this.cltPubCfgService.getPubCfg(id,ap_sid,ap_tp)
       .subscribe(pubcfg => this.pubcfg = pubcfg);
   }
 

@@ -22,8 +22,8 @@ export class SubTsService {
     );
   }
 
-  getSubts(id:string):Observable<Subts>{
-    const url=`${this.url}/${id}`;
+  getSubts(id:string,host_id:string):Observable<Subts>{
+    const url=`${this.url}/${id}/${host_id}`;
     return this.http.get<Subts>(url).pipe(
       tap(_=>this.log(`fetched Subts id=${id}`)),catchError(this.handleError<Subts>(`getSubts id=${id}`))
     );
