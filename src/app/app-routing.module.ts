@@ -29,7 +29,7 @@ const routes: Routes = [
   { path: 'detail/pubinfo/:id', component: PubInfoDetailComponent },
   { path: 'detail/subinfo/:id', component: SubInfoDetailComponent },
   { path: 'detail/pubts/:id', component: PubtsDetailComponent },
-  { path: 'detail/subts/:id/host_id', component: SubtsDetailComponent },
+  { path: 'detail/subts/:id/:host_id', component: SubtsDetailComponent },
   { path: 'detail/linecfg/:id', component: LinecfgDetailComponent },
 
 
