@@ -48,7 +48,7 @@ export class ApInfoService {
     //this.messageService.add(`ApInfoService: fetched apinfo id=${id}`);
     const url = `${this.apinfosUrl}/${id}`;
 
-    //const url = `${this.apinfosUrl}/?:ap_id_cd=${id}`;
+    //const url = `${this.apinfosUrl}/?ap_id_cd=${id}`;
 
 
     // return this.http.get<ApInfo>(url).pipe(
