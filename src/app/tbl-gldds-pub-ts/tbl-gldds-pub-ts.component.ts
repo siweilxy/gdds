@@ -13,10 +13,12 @@ export class TblGlddsPubTsComponent implements OnInit {
   constructor(private pubtsService:PubTsService) { }
 
   ngOnInit() {
+    console.log("ngOnInit");
     this.getPubtses();
   }
 
   getPubtses():void{
+    console.log("getPubTses");
     this.pubtsService.getPubtses().subscribe(pubtses=>this.pubtses=pubtses);
   }
 

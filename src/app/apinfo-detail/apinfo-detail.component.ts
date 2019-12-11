@@ -21,13 +21,13 @@ export class ApinfoDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.getApinfo();
+    
   }
 
   getApinfo(): void {
     const id = this.route.snapshot.paramMap.get('ap_id_cd')+"";
     this.apinfoService.getApInfo(id)
       .subscribe(apinfo => this.apinfo = apinfo);
-      console.log("apinfo is "+this.apinfo.ap_id_cd +" id is "+ id)
   }
 
   goBack(): void {
