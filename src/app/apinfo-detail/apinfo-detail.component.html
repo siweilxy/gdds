@@ -1,8 +1,8 @@
 <div *ngIf="apinfo">
     <nav>
         <!-- <a routerLink="/dashboard">Dashboard</a> -->
-        <a routerLink="/allPubs/{{apinfo.ap_id_cd}}">{{apinfo.ap_id_cd}}-AllPubs</a>
-        <a routerLink="/allSubs/{{apinfo.ap_id_cd}}">{{apinfo.ap_id_cd}}-AllSubs</a>
+        <a routerLink="/relationPubs/{{apinfo.ap_id_cd}}">{{apinfo.ap_id_cd}}-relationPubs</a>
+        <a routerLink="/relationSubs/{{apinfo.ap_id_cd}}">{{apinfo.ap_id_cd}}-relationSubs</a>
       </nav>
   <h2>{{apinfo.ap_id_cd | uppercase}} Details</h2>
   <div>

@@ -1,0 +1,11 @@
+<h2>relation-pubs</h2>      
+<ul class="pubs">
+  <li *ngFor="let pub of pubs">
+    <a routerLink="/subsOfPub/{{pub}}">
+      <span class="badge">{{pub}}</span>
+    </a><br>
+    <a routerLink="/detail/pubinfo/{{pub}}">
+      <span class="badge">任务详细信息</span>
+    </a>
+  </li>
+</ul>

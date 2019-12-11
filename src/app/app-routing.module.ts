@@ -18,6 +18,10 @@ import { SubInfoDetailComponent } from './subinfo-detail/subinfo-detail.componen
 import { PubtsDetailComponent } from './pubts-detail/pubts-detail.component';
 import { LinecfgDetailComponent } from './linecfg-detail/linecfg-detail.component';
 import { SubtsDetailComponent } from './subts-detail/subts-detail.component';
+import { RelationPubsComponent } from './relation-pubs/relation-pubs.component';
+import { RelationSubsComponent } from './relation-subs/relation-subs.component';
+import { SubsOfPubComponent } from './subs-of-pub/subs-of-pub.component';
+import { PubsOfSubComponent } from './pubs-of-sub/pubs-of-sub.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -32,6 +36,11 @@ const routes: Routes = [
   { path: 'detail/subts/:task_index/:host_id', component: SubtsDetailComponent },
   { path: 'detail/linecfg/:line_no', component: LinecfgDetailComponent },
 
+  { path: 'relationPubs/:ap_id_cd', component: RelationPubsComponent },
+  { path: 'relationSubs/:ap_id_cd', component: RelationSubsComponent },
+
+  { path: 'subsOfPub/:pub', component: SubsOfPubComponent },
+  { path: 'pubsOfSub/:sub', component: PubsOfSubComponent },
 
   { path: 'apinfos', component: TblGlddsApInfoComponent },
   { path: 'pubcfgs',component:TblGlddsCltpubCfgComponent},

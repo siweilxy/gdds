@@ -27,6 +27,10 @@ import { SubInfoDetailComponent } from './subinfo-detail/subinfo-detail.componen
 import { LinecfgDetailComponent } from './linecfg-detail/linecfg-detail.component';
 import { PubtsDetailComponent } from './pubts-detail/pubts-detail.component';
 import { SubtsDetailComponent } from './subts-detail/subts-detail.component';
+import { RelationPubsComponent } from './relation-pubs/relation-pubs.component';
+import { RelationSubsComponent } from './relation-subs/relation-subs.component';
+import { SubsOfPubComponent } from './subs-of-pub/subs-of-pub.component';
+import { PubsOfSubComponent } from './pubs-of-sub/pubs-of-sub.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +53,11 @@ import { SubtsDetailComponent } from './subts-detail/subts-detail.component';
     SubInfoDetailComponent,
     LinecfgDetailComponent,
     PubtsDetailComponent,
-    SubtsDetailComponent
+    SubtsDetailComponent,
+    RelationPubsComponent,
+    RelationSubsComponent,
+    SubsOfPubComponent,
+    PubsOfSubComponent
   ],
   imports: [
     BrowserModule,

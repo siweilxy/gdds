@@ -1,0 +1,9 @@
+<h2>subsOfPub</h2>      
+<ul class="subs">
+  <li *ngFor="let sub of subs">
+    <a>{{sub}}</a><br>
+    <a routerLink="/detail/subinfo/{{sub}}">
+      <span class="badge">订阅端详细信息</span>
+    </a>
+  </li>
+</ul>
