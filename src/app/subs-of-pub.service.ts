@@ -14,7 +14,7 @@ export class SubsOfPubService {
   getSubs(pub:string):Observable<string[]>
   {
     const endUrl = `${this.url}/${pub}`;
-    return this.http.get<string[]>(this.url).pipe(
+    return this.http.get<string[]>(endUrl).pipe(
       tap(_=>this.log('fetched Subs')),catchError(this.handleError<string[]>('getSubs',[]))
     );
   }

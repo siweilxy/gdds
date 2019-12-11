@@ -14,7 +14,7 @@ export class RelationPubsService {
   getPubs(ap_id_cd:string):Observable<string[]>
   {
     const endUrl = `${this.url}/${ap_id_cd}`;
-    return this.http.get<string[]>(this.url).pipe(
+    return this.http.get<string[]>(endUrl).pipe(
       tap(_=>this.log('fetched Pubs')),catchError(this.handleError<string[]>('getPubs',[]))
     );
   }

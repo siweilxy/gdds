@@ -1,3 +1,11 @@
-<p>
-  relation-subs works!
-</p>
+<h2>relation-subs</h2>      
+<ul class="subs">
+  <li *ngFor="let sub of subs">
+    <a routerLink="/pubsOfSub/{{sub}}">
+      <span class="badge">{{sub}}</span>
+    </a><br>
+    <a routerLink="/detail/subinfo/{{sub}}">
+      <span class="badge">任务详细信息</span>
+    </a>
+  </li>
+</ul>

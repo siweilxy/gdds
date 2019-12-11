@@ -1,3 +1,9 @@
-<p>
-  pubs-of-sub works!
-</p>
+<h2>pubsOfSub</h2>      
+<ul class="pubs">
+  <li *ngFor="let pub of pubs">
+    <a>{{pub}}</a><br>
+    <a routerLink="/detail/pubinfo/{{pub}}">
+      <span class="badge">发送端详细信息</span>
+    </a>
+  </li>
+</ul>
